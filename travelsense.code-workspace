@@ -1,0 +1,43 @@
+{
+  "folders": [
+    { "path": "." }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "./backend/venv/bin/python",
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": ["backend"],
+    "python.formatting.provider": "none",
+    "[python]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "editor.tabSize": 4
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "FastAPI dev",
+        "type": "python",
+        "request": "launch",
+        "module": "uvicorn",
+        "args": ["app.main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"],
+        "cwd": "${workspaceFolder}/backend",
+        "env": {
+          "DATABASE_URL": "sqlite:///./travelsense.db",
+          "SECRET_KEY": "dev-only-secret"
+        }
+      }
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "charliermarsh.ruff",
+      "bradlc.vscode-tailwindcss",
+      "esbenp.prettier-vscode",
+      "dsznajder.es7-react-js-snippets",
+      "ms-azuretools.vscode-docker"
+    ]
+  }
+}
