@@ -1,4 +1,3 @@
-"""TravelSense+ — 28 tests, ≥70% coverage (task 9)."""
 import pytest
 from fastapi.testclient import TestClient
 
