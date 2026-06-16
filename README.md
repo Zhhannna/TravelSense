@@ -123,12 +123,12 @@ docker-compose up --build
 
 # Option 2
 
-# Terminal 1
+## Terminal 1
 cd travelsense/backend
 venv\Scripts\activate
 uvicorn app.main:app --reload
 
-# Terminal 2  
+## Terminal 2  
 cd travelsense/frontend
 npm install
 npm run dev
