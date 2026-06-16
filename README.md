@@ -116,10 +116,22 @@ Recommendations:
 
 ---
 
-## 🐳 Running with Docker
+## 🐳 Running 
 
+# Option 1
 docker-compose up --build
 
+# Option 2
+
+# Terminal 1
+cd travelsense/backend
+venv\Scripts\activate
+uvicorn app.main:app --reload
+
+# Terminal 2  
+cd travelsense/frontend
+npm install
+npm run dev
 ---
 
 ## 🔮 Future Improvements
